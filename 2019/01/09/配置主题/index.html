@@ -97,16 +97,16 @@
 
 
   <meta name="description" content="本文是基于Next主题下的配置首先找到theme/next下的config.yml文件【#代表注释】">
-<meta name="keywords" content="set blog">
+<meta name="keywords" content="set_blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="配置主题">
+<meta property="og:title" content="博客配置">
 <meta property="og:url" content="https://gaobqun.github.io/2019/01/09/配置主题/index.html">
 <meta property="og:site_name" content="Gaobqun&#39;s Notes">
 <meta property="og:description" content="本文是基于Next主题下的配置首先找到theme/next下的config.yml文件【#代表注释】">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-09T06:58:22.859Z">
+<meta property="og:updated_time" content="2019-01-09T10:50:54.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="配置主题">
+<meta name="twitter:title" content="博客配置">
 <meta name="twitter:description" content="本文是基于Next主题下的配置首先找到theme/next下的config.yml文件【#代表注释】">
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>配置主题 | Gaobqun's Notes</title>
+  <title>博客配置 | Gaobqun's Notes</title>
   
 
 
@@ -260,7 +260,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">1</span></a>
 
   </li>
         
@@ -367,7 +367,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">配置主题
+          <h1 class="post-title" itemprop="name headline">博客配置
 
               
             
@@ -393,7 +393,7 @@
                 
               
 
-              <time title="创建时间：2019-01-09 13:56:13 / 修改时间：14:58:22" itemprop="dateCreated datePublished" datetime="2019-01-09T13:56:13+08:00">2019-01-09</time>
+              <time title="创建时间：2019-01-09 13:56:13 / 修改时间：18:50:54" itemprop="dateCreated datePublished" datetime="2019-01-09T13:56:13+08:00">2019-01-09</time>
             
 
             
@@ -495,6 +495,10 @@
 <p>修改categories/index.md:</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2019-01-01 00:00:00</span><br><span class="line">type: categories</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><blockquote>
+<p>选择一个第三方评论系统：<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/third-party-services.html</a><br>我选择的是livere</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&gt; 得到uid</span><br><span class="line">注册账号：https://livere.com/</span><br><span class="line">登陆账号</span><br><span class="line">点击菜单-&gt;安装</span><br><span class="line">选择city版</span><br><span class="line">填写内容，其中url就是自己博客的url</span><br><span class="line">提交之后，点击头像，选择管理页面-&gt;代码管理-&gt;一般网站，data-uid 即为所需 uid。</span><br><span class="line"></span><br><span class="line">&gt; 首先在 _config.yml 文件中添加如下配置</span><br><span class="line">livere_uid: your uid</span><br><span class="line"></span><br><span class="line">&gt; 在 layout/_scripts/third-party/comments/ 目录中添加 livere.swig，文件内容如下：</span><br><span class="line">&#123;% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname and not theme.disqus_shortname and not theme.hypercomments_id and not theme.gentie_productKey %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;% if theme.livere_uid %&#125;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">      (function(d, s) &#123;</span><br><span class="line">        var j, e = d.getElementsByTagName(s)[0];</span><br><span class="line">        if (typeof LivereTower === &apos;function&apos;) &#123; return; &#125;</span><br><span class="line">        j = d.createElement(s);</span><br><span class="line">        j.src = &apos;https://cdn-city.livere.com/js/embed.dist.js&apos;;</span><br><span class="line">        j.async = true;</span><br><span class="line">        e.parentNode.insertBefore(j, e);</span><br><span class="line">      &#125;)(document, &apos;script&apos;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">优先使用其他评论插件，如果其他评论插件没有开启，且 LiveRe 评论插件配置开启了，则使用 LiveRe。其中脚本代码为上一步管理页面中获取到的。</span><br><span class="line"></span><br><span class="line">&gt; 引入 LiveRe 评论插件,在 layout/_scripts/third-party/comments.swig 文件中追加：</span><br><span class="line">&#123;% include &apos;./comments/livere.swig&apos; %&#125;</span><br><span class="line"></span><br><span class="line">&gt; 最后，在 layout/_partials/comments.swig 文件中条件最后追加 LiveRe 插件是否引用的判断逻辑：</span><br><span class="line">&#123;% elseif theme.livere_uid %&#125;</span><br><span class="line">      &lt;div id=&quot;lv-container&quot; data-id=&quot;city&quot; data-uid=&quot;&#123;&#123; theme.livere_uid &#125;&#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">其中 data-uid 属性的值即在主题配置文件中配置的 theme.livere_uid 的值</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -518,7 +522,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/set-blog/" rel="tag"># set blog</a>
+            <a href="/tags/set-blog/" rel="tag"># set_blog</a>
           
         </div>
       
@@ -633,10 +637,6 @@
                     
                       
                     
-                      
-                    
-                      
-                    
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -673,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置布局"><span class="nav-number">1.</span> <span class="nav-text">设置布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置左侧的菜单"><span class="nav-number">2.</span> <span class="nav-text">设置左侧的菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置站点"><span class="nav-number">3.</span> <span class="nav-text">设置站点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置头像"><span class="nav-number">4.</span> <span class="nav-text">设置头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置菜单的链接"><span class="nav-number">5.</span> <span class="nav-text">配置菜单的链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置布局"><span class="nav-number">1.</span> <span class="nav-text">设置布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置左侧的菜单"><span class="nav-number">2.</span> <span class="nav-text">设置左侧的菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置站点"><span class="nav-number">3.</span> <span class="nav-text">设置站点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置头像"><span class="nav-number">4.</span> <span class="nav-text">设置头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置菜单的链接"><span class="nav-number">5.</span> <span class="nav-text">配置菜单的链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加评论"><span class="nav-number">6.</span> <span class="nav-text">添加评论</span></a></li></ol></div>
             
 
           </div>
